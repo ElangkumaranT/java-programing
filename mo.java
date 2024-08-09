@@ -1,0 +1,45 @@
+import java.util.*;
+class mobile extends Exception
+{
+public mobile()
+{
+System.out.println("moblie number must be 10 digit");
+}
+public mobile(char a)
+{
+System.out.println("mobile start with 6,7,8,9");
+}
+}
+class mo
+{
+public static void main(String arg[])
+{
+Scanner obj = new Scanner(System.in);
+System.out.println("enter a moblie number");
+String str = obj.nextLine();
+try
+{
+int len = str.length();
+char ch = str.charAt(0);
+if(len==10)
+{
+  if(ch=='9'||ch=='8')
+  {
+    System.out.println("mobile number is valied");
+  }
+  else 
+  {
+    throw new mobile(ch);
+  }
+}
+else
+{
+throw new mobile();
+}
+}
+catch(mobile o)
+{
+System.out.println(o);
+}
+}
+}

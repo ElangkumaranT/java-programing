@@ -1,0 +1,13 @@
+public class exam
+{
+static void increment(int a)
+{
+++a;
+}
+public static void main(String ard[])
+{
+int a = 10;
+increment(a);
+System.out.println(a);
+}
+}
